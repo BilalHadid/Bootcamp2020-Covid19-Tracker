@@ -7,15 +7,18 @@ import Typography from '@material-ui/core/Typography';
 import avator from '../icons/TotalCases.png'
 import avators from '../icons/TotalDeath.png'
 import avatory from '../icons/recovered.png'
-import avamtor from '../icons/countries.png'
+import CountUp from 'react-countup'
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     minWidth: '200',
     maxWidth: '20rem',
-    margin: '3%',
+    marginLeft: '5%',
+    marginBottom: "2%",
     float: 'left',
+    width: '45%',
 
     background: "#6900E2",
   },
@@ -46,8 +49,15 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-export const Cards = () => {
+export const Cards = ({summary,country}) => {
     const classes = useStyles();
+    if(!summary){
+        return ''
+    }
+    if(!country){
+        return '...Loading'
+    }
+    
     return(
         <Fragment >
         <Card className={classes.root}>
@@ -56,8 +66,15 @@ export const Cards = () => {
                 <Typography component="h5" variant="h5">
                     Total Cases
                 </Typography>
-                <Typography variant="subtitle1" color="textSecondary">
-                    58,96023
+                <Typography  color="textSecondary">
+                    <CountUp 
+                        start={0}
+                        end={summary.TotalConfirmed}
+                        duration={2.5}
+                        separator=","
+                    
+                    />
+                   
                 </Typography>
                 </CardContent>
             
@@ -75,7 +92,14 @@ export const Cards = () => {
                     Total Death
                 </Typography>
                 <Typography variant="subtitle1" color="textSecondary">
-                    58,96023
+                <CountUp 
+                        start={0}
+                        end={summary.TotalDeaths}
+                        duration={2.5}
+                        separator=","
+                    
+                    />
+                    
                 </Typography>
                 </CardContent>
             
@@ -93,7 +117,14 @@ export const Cards = () => {
                     Recovered
                 </Typography>
                 <Typography variant="subtitle1" color="textSecondary">
-                    58,96023
+                <CountUp 
+                        start={0}
+                        end={summary.TotalRecovered}
+                        duration={2.5}
+                        separator=","
+                    
+                    />
+                    
                 </Typography>
                 </CardContent>
             
@@ -104,24 +135,7 @@ export const Cards = () => {
                 title="Total Cases"
             />
         </Card>
-        <Card className={classes.root} style={{background: '#FFCA00'}}>
-            <div className={classes.details}>
-                <CardContent className={classes.content}>
-                <Typography component="h5" variant="h5">
-                    Countries
-                </Typography>
-                <Typography variant="subtitle1" color="textSecondary">
-                    58,96023
-                </Typography>
-                </CardContent>
-            
-            </div>
-            <CardMedia
-                className={classes.cover}
-                image={avamtor}
-                title="Total Cases"
-            />
-        </Card>
+        
        
     </Fragment>
     )
