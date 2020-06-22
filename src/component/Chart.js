@@ -1,79 +1,35 @@
-import React from 'react'
-import {Pie,Line} from 'react-chartjs-2'
+import React from 'react';
+import { Line } from 'react-chartjs-2';
+import './Chart.css'
 
-export const Chart = ({finalize}) => {
-    const state = {
-        charData:{
-            labels:['New Confirmed','New Death','New recovered','Total Confirmed','Total Deaths','Total Recovered'],
-            datasets:[
-                {
-                    label: 'Population',
-                    data:[
-                       122252,
-                       255345,
-                       685522,
-                       125356,
-                       125386,
-                       123566
-                    ],
-                    backgroundColor:[
-                        'rgba(255, 99, 132, 0.6)',
-                        'rgba(54, 162, 253, 0.6)',
-                        'rgba(255, 206, 86, 0.6)',
-                        'rgba(75, 192, 192, 0.6)',
-                        'rgba(153, 102, 255, 0.6)',
-                        'rgba(255, 159, 64, 0.6)',
-                        'rgba(255, 99, 132, 0.6)',
-                    ]
-                }
-            ]
+const Chart = ({dailyData,categories}) => {
+    const data = {
+      labels: [
+       ...categories
+      ],
+      datasets: [
+        {
+          label: 'Daily Cases',
+          data: [...dailyData.data],
+          fill: false,          // Don't fill area under the line
+          borderColor: 'green'  // Line color
         }
+      ]
     }
-    return(
-        <div className="chart">
-            {/* <Bar
-                data={state.charData}
-                
-                options={{
-                    title:{
-                        display:true,
-                        text: 'Largest Population are effected covid 19',
-                        fontSize: 25
-                    },
-                    legend:{
-                        display: true,
-                        position: 'bottom'
-                    }
-                }} /> */}
-            <Line
-                data={state.charData}
-                
-                options={{
-                    title:{
-                        display:true,
-                        text: 'Largest Population are effected covid 19',
-                        fontSize: 25
-                    },
-                    legend:{
-                        display: true,
-                        position: 'right'
-                    }
-                }} />
-            <Pie
-                data={state.charData}
-                
-                options={{
-                    title:{
-                        display:true,
-                        text: 'Largest Population are effected covid 19',
-                        fontSize: 25
-                    },
-                    legend:{
-                        display: true,
-                        position: 'right'
-                    }
-                }} />
 
-        </div>
-    )
-}
+    const options = {
+      maintainAspectRatio: true	// Don't maintain w/h ratio
+    }
+
+    return (
+      <div >
+        
+          
+        <article className="chart-container" >
+          <Line data={data} options={options}/>
+        </article>
+      </div>
+    );
+  }
+
+export default Chart

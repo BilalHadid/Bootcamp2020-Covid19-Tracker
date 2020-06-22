@@ -1,7 +1,7 @@
 import React,{Component} from 'react'
 import axios from 'axios'
 import {Cards} from '../component/card'
-
+import Countries from '../component/Countries'
 
 class Api extends Component{
     state ={
@@ -13,7 +13,7 @@ class Api extends Component{
     async componentDidMount(){
         const res = await axios.get("https://api.covid19api.com/summary")
         console.log(res)
-        this.setState({Countries: res.data.countries})
+        this.setState({countries: res.data.Countries})
         this.setState({currentDate: res.data.Date})
         this.setState({global: res.data.Global})
         this.setState({loading: false})
@@ -25,7 +25,24 @@ class Api extends Component{
         
         return(
             <div>
-               <Cards summary={this.state.global} country={this.state.countries}/>
+               <Cards summary={this.state.global} date={this.state.currentDate}/>
+               <table>
+                   <thead>
+                       <tr>
+                           <th>Country</th>
+                           <th>New Confirmed</th>
+                           <th>Total Recovered</th>
+                           <th>Total Death</th>
+                           
+                       </tr>
+                   </thead>
+                   <tbody>
+                       {this.state.countries.map(country => {
+                           <Countries countries = {country} key={country.Country}/>
+                       })}
+                   </tbody>
+               </table>
+
             </div>
         )
     }

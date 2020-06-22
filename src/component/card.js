@@ -49,14 +49,12 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-export const Cards = ({summary,country}) => {
+export const Cards = ({summary,date}) => {
     const classes = useStyles();
     if(!summary){
         return ''
     }
-    if(!country){
-        return '...Loading'
-    }
+    
     
     return(
         <Fragment >
@@ -76,6 +74,7 @@ export const Cards = ({summary,country}) => {
                     />
                    
                 </Typography>
+                <Typography>{new Date(date).toDateString()}</Typography>
                 </CardContent>
             
             </div>
@@ -101,6 +100,7 @@ export const Cards = ({summary,country}) => {
                     />
                     
                 </Typography>
+                <Typography>{new Date(date).toDateString()}</Typography>
                 </CardContent>
             
             </div>
@@ -126,6 +126,7 @@ export const Cards = ({summary,country}) => {
                     />
                     
                 </Typography>
+                <Typography>{new Date(date).toDateString()}</Typography>
                 </CardContent>
             
             </div>
@@ -135,7 +136,7 @@ export const Cards = ({summary,country}) => {
                 title="Total Cases"
             />
         </Card>
-        
+       
        
     </Fragment>
     )

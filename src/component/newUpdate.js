@@ -5,6 +5,7 @@ import CardActionArea from "@material-ui/core/CardActionArea";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
+import CountUp from 'react-countup'
 
 const useStyles = makeStyles({
   root: {
@@ -53,17 +54,20 @@ const useStyles = makeStyles({
 });
 
 
-export const Update = () => {
-
+export const Update = ({updation}) => {
     const classes = useStyles();
+    
+    
     return(
+        <div>
         <Fragment>
             <Card className={classes.root}>
                 <CardActionArea>
                         
                         <CardContent>
                         <Typography gutterBottom variant="h4" component="h2">
-                            12,2053
+                            {/* {updation.NewConfirmed} */}
+                            1253552
                         </Typography>
                         
                         </CardContent>
@@ -103,5 +107,6 @@ export const Update = () => {
                 </CardActions>
             </Card>
     </Fragment>
+    </div>
         )
 }
