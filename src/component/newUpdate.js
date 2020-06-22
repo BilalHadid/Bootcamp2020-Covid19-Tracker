@@ -4,8 +4,6 @@ import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
-import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles({
@@ -15,7 +13,8 @@ const useStyles = makeStyles({
     textAlign: 'center',
     display: 'inline-block',
     width: '25%',
-    marginLeft: '5%'
+    marginLeft: '5%',
+    
   },
   roottwo:{
     textAlign: 'center',
@@ -61,11 +60,7 @@ export const Update = () => {
         <Fragment>
             <Card className={classes.root}>
                 <CardActionArea>
-                        <CardMedia
-                        alt="Contemplative Reptile"
-                        height="140"
-                        title="Contemplative Reptile"
-                        />
+                        
                         <CardContent>
                         <Typography gutterBottom variant="h4" component="h2">
                             12,2053
@@ -80,11 +75,7 @@ export const Update = () => {
 
             <Card className={classes.roottwo} >
                 <CardActionArea>
-                        <CardMedia
-                        alt="Contemplative Reptile"
-                        height="140"
-                        title="Contemplative Reptile"
-                        />
+                        
                         <CardContent>
                         <Typography gutterBottom variant="h4" component="h2">
                             12,2053
@@ -99,11 +90,7 @@ export const Update = () => {
 
             <Card className={classes.rootthree}>
                 <CardActionArea>
-                        <CardMedia
-                        alt="Contemplative Reptile"
-                        height="140"
-                        title="Contemplative Reptile"
-                        />
+                        
                         <CardContent>
                         <Typography gutterBottom variant="h4" component="h2">
                             12,2053
