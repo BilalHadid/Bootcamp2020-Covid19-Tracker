@@ -22,7 +22,6 @@ class Api extends Component{
         if(this.state.loading){
             return <h1>Loadding....</h1>
         }
-        
         return(
             <div>
                <Cards summary={this.state.global} date={this.state.currentDate}/>
@@ -37,9 +36,9 @@ class Api extends Component{
                        </tr>
                    </thead>
                    <tbody>
-                       {this.state.countries.map(country => {
+                       {this.state.countries.map(country => (
                            <Countries countries = {country} key={country.Country}/>
-                       })}
+                           ))}
                    </tbody>
                </table>
 

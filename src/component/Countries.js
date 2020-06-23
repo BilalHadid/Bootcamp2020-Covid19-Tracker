@@ -6,7 +6,7 @@ class Countries extends Component{
         const {countries} = this.props
         return(
             <tr>
-                <td>{countries.Country}</td>
+                <td>{countries}</td>
             </tr>
         )
     }
