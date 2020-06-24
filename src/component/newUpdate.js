@@ -67,7 +67,14 @@ export const Update = ({updation}) => {
                         <CardContent>
                         <Typography gutterBottom variant="h4" component="h2">
                             {/* {updation.NewConfirmed} */}
-                            1253552
+                            <CountUp 
+                                start={0}
+                                end={1253552}
+                                duration={2.5}
+                                separator=","
+                            
+                            />
+                            
                         </Typography>
                         
                         </CardContent>
@@ -82,7 +89,15 @@ export const Update = ({updation}) => {
                         
                         <CardContent>
                         <Typography gutterBottom variant="h4" component="h2">
-                            12,2053
+                        <CountUp 
+                                start={0}
+                                end={122053}
+                                duration={2.5}
+                                separator=","
+                            
+                            />
+                            
+                            
                         </Typography>
                         
                         </CardContent>
@@ -97,7 +112,13 @@ export const Update = ({updation}) => {
                         
                         <CardContent>
                         <Typography gutterBottom variant="h4" component="h2">
-                            12,2053
+                            <CountUp 
+                                    start={0}
+                                    end={122053}
+                                    duration={1.5}
+                                    separator=","
+                                
+                                />
                         </Typography>
                         
                         </CardContent>

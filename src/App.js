@@ -11,15 +11,18 @@ function App() {
     <Fragment>
           <div className="App">
             <Header />
-          
           </div>
-          <div>
-            <h2>COVID 19 Tracker</h2>
-          <Cards/>
-          <Api/>
-          <h2 className="Updates">New Updates</h2>
-              <Update/>
-         </div>
+            <div>
+              <h2>COVID 19 Tracker</h2>
+
+            <Cards/>  
+            </div>
+            <div>
+            
+            <Api/>
+            <h2 className="Updates">New Updates</h2>
+            </div>
+         
          <Graph/>
      
      </Fragment>
