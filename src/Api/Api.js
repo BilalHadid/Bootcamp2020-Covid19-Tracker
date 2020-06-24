@@ -29,11 +29,16 @@ class Api extends Component{
         
         return(
             <div>
+            <h2 className="Updates">COVID 19 Tracker</h2>
             <div className="firstCard">
+            
                <Cards summary={this.state.global} date={this.state.currentDate}/>
             </div>
-            <div className="secondCard">
+
+            <br/>
             <h2 className="Updates">New Updates</h2>
+            <div className="secondCard">
+            
                 <Update updation={this.state.global}/>
             </div>
             </div>

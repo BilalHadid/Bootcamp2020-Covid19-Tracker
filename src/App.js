@@ -8,20 +8,19 @@ import Graph from './Api/ApiGraph'
 function App() {
   return (
     <Fragment>
-          <div className="App">
-            <Header />
-          </div>
-            <div>
-            <h2>COVID 19 Tracker</h2>
+              <div className="App">
+                <Header />
+              </div>
 
-            <Cards/>  
-            </div>
-            <div>
-            
-            <Api/>
-            </div>
+              <div>
+                  <Cards/>  
+              </div>
+              <div>
+              
+                 <Api/>
+              </div>
          
-         <Graph/>
+             <Graph/>
      
      </Fragment>
   );

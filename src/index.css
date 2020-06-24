@@ -12,7 +12,8 @@ code {
     monospace;
 }
 .Updates{
-  margin-left: 25px;
+  margin: 2rem;
+  margin-left: 2rem;
   text-decoration: underline;
   color: darkslategrey;
 }

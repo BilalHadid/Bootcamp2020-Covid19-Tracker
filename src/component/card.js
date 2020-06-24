@@ -10,15 +10,22 @@ import avatory from '../icons/recovered.png'
 import CountUp from 'react-countup'
 
 
+
 const useStyles = makeStyles((theme) => ({
+
   root: {
     display: 'flex',
     maxWidth: '50%',
-    minWidth: '25%',
-    marginLeft: '5%',
-    marginBottom: "2%",
+    minWidth: '20rem',
+    marginLeft: '1%',
+    marginBottom: "20%",
+    textAlign: 'center',
+    margin: '3rem',
+    marginBottom: '-1rem',
     float: 'left',
     background: "#6900E2",
+    overflow: 'auto',
+    marginLeft: '2rem'
   },
   details: {
     display: 'flex',
@@ -43,7 +50,8 @@ const useStyles = makeStyles((theme) => ({
   },
   OverAll:{
       display: "inline-block"
-  }
+  },
+  
 }));
 
 

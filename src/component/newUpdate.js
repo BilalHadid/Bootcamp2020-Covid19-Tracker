@@ -6,17 +6,18 @@ import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import CountUp from 'react-countup'
+import '../App.css'
 
 
 const useStyles = makeStyles({
   root: {
-    
     background: '#D7E0FB',
     textAlign: 'center',
     display: 'inline-block',
     maxWidth: '50%',
     marginLeft: '5%',
-    minWidth: '25%'
+    minWidth: '20rem',
+    marginTop: '2rem',
     
   },
   roottwo:{
@@ -26,7 +27,9 @@ const useStyles = makeStyles({
     marginLeft: '5%',
     background: '#FFD5E3',
 
-    minWidth: '25%'
+    marginTop: '2rem',
+
+    minWidth: '20rem'
   },
   rootthree:{
     textAlign: 'center',
@@ -34,7 +37,8 @@ const useStyles = makeStyles({
     maxWidth: '50%',
     marginLeft: '5%',
     background: '#CCF9EC',
-    minWidth: '25%'
+    minWidth: '20rem',
+    marginTop: '2rem',
   },
   bootomSet:{
       background: '#6900E2',
@@ -54,7 +58,8 @@ const useStyles = makeStyles({
       paddingLeft: '36%',
       background: '#00E1A2'
 
-  }
+  },
+  
 
 });
 
@@ -65,10 +70,10 @@ export const Update = ({updation}) => {
     
     return(
         <div>
-        <Fragment>
+        <Fragment >
+            
             <Card className={classes.root}>
                 <CardActionArea>
-                        
                         <CardContent>
                         <Typography gutterBottom variant="h4" component="h2">
                             {/* {updation.NewConfirmed} */}
