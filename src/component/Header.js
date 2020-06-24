@@ -1,6 +1,8 @@
 import React,{Fragment} from 'react'
 import {Main} from './Main'
 import { makeStyles } from '@material-ui/core/styles'
+
+
 import {
     AppBar,
     Toolbar,
@@ -14,10 +16,16 @@ import avator from '../images/tenor.gif'
 const useStyles = makeStyles({
     menuContainer:{
         color: 'white',
-        marginLeft: '40%',
+        // marginLeft: '40%',
         marginTop: '1%',
         
         backgroundAttachment: 'unset',
+        display: "flex",
+        flexdirection: "column",
+        justifycontent: "center",
+        alignitems: "center",
+        textalign: "center",
+        minheight: "100vh",
     },
     main: {
         // background: '#D9FFFF0D',
@@ -52,13 +60,13 @@ export const Header = () => {
         <Fragment>
         <Box component= "nav" className={classes.navBar}>
             <AppBar className={classes.main}>
+                
                 <Toolbar className={classes.menuContainer}>
                     <Avatar src ={avator} alt="Rusel" />
                     <Typography variant="h4" className={classes.Covid} >Covid</Typography>
                     <Typography variant="h4" className={classes.nine} >_19 </Typography>
                 </Toolbar>
             </AppBar>
-
         </Box>
         <Main />
         </Fragment>

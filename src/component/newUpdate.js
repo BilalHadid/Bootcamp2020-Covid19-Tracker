@@ -7,6 +7,7 @@ import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import CountUp from 'react-countup'
 
+
 const useStyles = makeStyles({
   root: {
     
@@ -59,7 +60,7 @@ export const Update = ({updation}) => {
     
     
     return(
-        <div>
+        <div dir="rtl">
         <Fragment>
             <Card className={classes.root}>
                 <CardActionArea>
