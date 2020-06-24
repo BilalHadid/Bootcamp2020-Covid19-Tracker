@@ -48,3 +48,10 @@
     transform: rotate(360deg);
   }
 }
+.firstCard{
+  height: 150px;
+  font-size: 2.0rem;
+@media (min-width:600px){font-size: 3.8rem;}
+          
+}
+

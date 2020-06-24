@@ -30,7 +30,6 @@ class Api extends Component{
             <div>
             <div className="firstCard">
                <Cards summary={this.state.global} date={this.state.currentDate}/>
-               <hr/>
             </div>
             <div className="secondCard">
             <h2 className="Updates">New Updates</h2>
