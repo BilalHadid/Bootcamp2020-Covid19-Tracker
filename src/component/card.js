@@ -13,13 +13,11 @@ import CountUp from 'react-countup'
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
-    minWidth: '200',
-    maxWidth: '20rem',
+    maxWidth: '50%',
+    minWidth: '25%',
     marginLeft: '5%',
     marginBottom: "2%",
     float: 'left',
-    width: '45%',
-
     background: "#6900E2",
   },
   details: {

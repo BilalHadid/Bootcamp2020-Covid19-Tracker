@@ -14,23 +14,27 @@ const useStyles = makeStyles({
     background: '#D7E0FB',
     textAlign: 'center',
     display: 'inline-block',
-    width: '25%',
+    maxWidth: '50%',
     marginLeft: '5%',
+    minWidth: '25%'
     
   },
   roottwo:{
     textAlign: 'center',
-    display: 'inline-block',
-    width: '25%',
+    float: 'left',
+    maxWidth: '50%',
     marginLeft: '5%',
-    background: '#FFD5E3'
+    background: '#FFD5E3',
+
+    minWidth: '25%'
   },
   rootthree:{
     textAlign: 'center',
     display: 'inline-block',
-    width: '25%',
+    maxWidth: '50%',
     marginLeft: '5%',
-    background: '#CCF9EC'
+    background: '#CCF9EC',
+    minWidth: '25%'
   },
   bootomSet:{
       background: '#6900E2',
@@ -60,7 +64,7 @@ export const Update = ({updation}) => {
     
     
     return(
-        <div dir="rtl">
+        <div>
         <Fragment>
             <Card className={classes.root}>
                 <CardActionArea>
