@@ -16,14 +16,11 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     justifyContent: "center",
-    maxWidth: '50%',
     minWidth: '20rem',
+    marginBottom: "20%",
     textAlign: 'center',
-    margin: '3rem',
-    float: 'left',
     background: "#6900E2",
     overflow: 'auto',
-    marginLeft: '2rem'
   },
   details: {
     display: 'flex',
@@ -42,10 +39,7 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: theme.spacing(1),
     paddingBottom: theme.spacing(1),
   },
-  playIcon: {
-    height: 38,
-    width: 38,
-  },
+ 
   OverAll:{
       display: "inline-block"
   },

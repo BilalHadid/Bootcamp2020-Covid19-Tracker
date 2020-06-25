@@ -3,6 +3,7 @@ import axios from 'axios'
 import {Cards} from '../component/card'
 import {Update} from '../component/newUpdate'
 import '../App.css'
+import '../index.css'
 
 
 class Api extends Component{
@@ -32,9 +33,6 @@ class Api extends Component{
             <div className="firstCard">
                 <Cards summary={this.state.global} date={this.state.currentDate}/>
             </div>
-
-            <br/>
-            
             <div className="secondCard">
                 
                 <Update updation={this.state.global}/>

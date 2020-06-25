@@ -25,6 +25,7 @@ code {
 .NewUpdate{
   display: flex;
   justify-content: space-around;
+  break-before: always;
   
 }
 @media only screen and (max-width: 600px){
@@ -33,12 +34,14 @@ code {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
   }
   .NewUpdate{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 20rem;
     align-items: center;
+    text-align: center;
+    margin-top: 35rem;
   }
 }

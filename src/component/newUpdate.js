@@ -6,6 +6,7 @@ import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import CountUp from 'react-countup'
+import '../App.css'
 import '../index.css'
 
 
@@ -13,12 +14,14 @@ const useStyles = makeStyles({
   root: {
     background: '#D7E0FB',
     textAlign: 'center',
+    maxWidth: '50%',
     minWidth: '20rem',
     marginTop: '2rem',
     
   },
   roottwo:{
     textAlign: 'center',
+    maxWidth: '50%',
     background: '#FFD5E3',
 
     marginTop: '2rem',
@@ -27,6 +30,7 @@ const useStyles = makeStyles({
   },
   rootthree:{
     textAlign: 'center',
+    maxWidth: '50%',
     background: '#CCF9EC',
     minWidth: '20rem',
     marginTop: '2rem',
@@ -57,8 +61,9 @@ export const Update = ({updation}) => {
     
     
     return(
-        
         <div className="NewUpdate">
+        
+            
             <Card className={classes.root}>
                 <CardActionArea>
                         <CardContent>
