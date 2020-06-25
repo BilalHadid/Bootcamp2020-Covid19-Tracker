@@ -1,4 +1,4 @@
-import React,{Fragment} from 'react'
+import React from 'react'
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
@@ -6,25 +6,19 @@ import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import CountUp from 'react-countup'
-import '../App.css'
+import '../index.css'
 
 
 const useStyles = makeStyles({
   root: {
     background: '#D7E0FB',
     textAlign: 'center',
-    display: 'inline-block',
-    maxWidth: '50%',
-    marginLeft: '5%',
     minWidth: '20rem',
     marginTop: '2rem',
     
   },
   roottwo:{
     textAlign: 'center',
-    float: 'left',
-    maxWidth: '50%',
-    marginLeft: '5%',
     background: '#FFD5E3',
 
     marginTop: '2rem',
@@ -33,9 +27,6 @@ const useStyles = makeStyles({
   },
   rootthree:{
     textAlign: 'center',
-    display: 'inline-block',
-    maxWidth: '50%',
-    marginLeft: '5%',
     background: '#CCF9EC',
     minWidth: '20rem',
     marginTop: '2rem',
@@ -43,19 +34,16 @@ const useStyles = makeStyles({
   bootomSet:{
       background: '#6900E2',
       color: 'white',
-      paddingLeft: '36%',
 
   },
   bottomtwo:{
     color: 'white',
-    paddingLeft: '36%',
 
     background: '#FF2B74'
   },
   bottomthree:{
       
       color: 'white',
-      paddingLeft: '36%',
       background: '#00E1A2'
 
   },
@@ -69,9 +57,8 @@ export const Update = ({updation}) => {
     
     
     return(
-        <div>
-        <Fragment >
-            
+        
+        <div className="NewUpdate">
             <Card className={classes.root}>
                 <CardActionArea>
                         <CardContent>
@@ -137,7 +124,6 @@ export const Update = ({updation}) => {
                         <Typography variant="h6" > Recovered </Typography>
                 </CardActions>
             </Card>
-    </Fragment>
     </div>
         )
 }

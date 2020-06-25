@@ -1,4 +1,4 @@
-import React,{Fragment} from 'react'
+import React from 'react'
 import { makeStyles} from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
@@ -8,20 +8,18 @@ import avator from '../icons/TotalCases.png'
 import avators from '../icons/TotalDeath.png'
 import avatory from '../icons/recovered.png'
 import CountUp from 'react-countup'
-
+import '../index.css'
 
 
 const useStyles = makeStyles((theme) => ({
 
   root: {
     display: 'flex',
+    justifyContent: "center",
     maxWidth: '50%',
     minWidth: '20rem',
-    marginLeft: '1%',
-    marginBottom: "20%",
     textAlign: 'center',
     margin: '3rem',
-    marginBottom: '-1rem',
     float: 'left',
     background: "#6900E2",
     overflow: 'auto',
@@ -63,7 +61,8 @@ export const Cards = ({summary,date}) => {
     
     
     return(
-        <Fragment >
+        <div className="Card">
+        
         <Card className={classes.root}>
             <div className={classes.details}>
                 <CardContent className={classes.content}>
@@ -144,7 +143,7 @@ export const Cards = ({summary,date}) => {
         </Card>
        
        
-    </Fragment>
+    </div>
     )
 
     

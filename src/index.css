@@ -12,8 +12,33 @@ code {
     monospace;
 }
 .Updates{
-  margin: 2rem;
-  margin-left: 2rem;
   text-decoration: underline;
   color: darkslategrey;
+  display: flex;
+  justify-content: center;
+  
+}
+.Card{
+  display: flex;
+  justify-content: space-around;
+}
+.NewUpdate{
+  display: flex;
+  justify-content: space-around;
+  
+}
+@media only screen and (max-width: 600px){
+  .Card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .NewUpdate{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20rem;
+    align-items: center;
+  }
 }

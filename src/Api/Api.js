@@ -4,7 +4,6 @@ import {Cards} from '../component/card'
 import {Update} from '../component/newUpdate'
 import '../App.css'
 
-// import Countries from '../component/Countries'
 
 class Api extends Component{
    
@@ -31,14 +30,13 @@ class Api extends Component{
             <div>
             <h2 className="Updates">COVID 19 Tracker</h2>
             <div className="firstCard">
-            
-               <Cards summary={this.state.global} date={this.state.currentDate}/>
+                <Cards summary={this.state.global} date={this.state.currentDate}/>
             </div>
 
             <br/>
-            <h2 className="Updates">New Updates</h2>
-            <div className="secondCard">
             
+            <div className="secondCard">
+                
                 <Update updation={this.state.global}/>
             </div>
             </div>
