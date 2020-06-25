@@ -1,14 +1,23 @@
-import React,{Component} from 'react'
+import React,{useState,useEffect} from 'react'
+import fetchPost from '../Api/ApiCountry'
 
-class Countries extends Component{
-    
-    render(){
-        const {countries} = this.props
-        return(
-            <tr>
-                <td>{countries}</td>
-            </tr>
-        )
-    }
+export const Countries = () => {
+    const [data, setData] = useState([])
+    useEffect(() => {
+        const data = async () => {
+            setData(await fetchPost())
+        }
+        data()
+    },[])
+    console.log(data)
+   if(!setData){
+       return <p>...lOading</p>
+   }
+    return (
+        <div>
+            {/* {data.map((a) => {
+                <p>{a.Country}</p>
+            })} */}
+        </div>
+    )
 }
-export default Countries

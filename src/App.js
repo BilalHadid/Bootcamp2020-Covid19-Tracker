@@ -3,6 +3,7 @@ import './App.css';
 import {Header} from './component/Header'
 import Api from './Api/Api'
 import Graph from './Api/ApiGraph'
+import {Countries} from './component/Countries'
  
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
               </div>
          
              <Graph/>
+             <Countries/>
      
      </Fragment>
   );
