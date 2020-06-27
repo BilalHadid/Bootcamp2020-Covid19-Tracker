@@ -16,7 +16,6 @@ class Api extends Component{
     }
     async componentDidMount(){
         const res = await axios.get("https://api.covid19api.com/summary")
-        console.log(res)
         this.setState({Countries: res.data.countries})
         this.setState({currentDate: res.data.Date})
         this.setState({global: res.data.Global})

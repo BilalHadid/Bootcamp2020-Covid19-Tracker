@@ -1,28 +1,28 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import './App.css';
 import {Header} from './component/Header'
 import Api from './Api/Api'
 import Graph from './Api/ApiGraph'
-import {Countries} from './component/Countries'
+import ApiCountry from './Api/ApiCountry'
  
 function App() {
   return (
-    <Fragment>
+    <div>
               <div className="App">
                 <Header />
               </div>
 
-              <div>
-              </div>
-              <div>
+              <div className="country">
+                
               
                  <Api/>
-              </div>
+              
          
              <Graph/>
-             <Countries/>
-     
-     </Fragment>
+             
+             <ApiCountry/>
+             </div>
+     </div>
   );
 }
 

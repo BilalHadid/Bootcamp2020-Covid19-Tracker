@@ -10,7 +10,6 @@ class Graph extends Component{
     }
     async componentDidMount(){
         const res = await axios.get("https://covid19-update-api.herokuapp.com/api/v1/cases/graphs")
-        console.log(res)
         this.setState({dailyUpdate: res.data.graphs.dailyCases})
         this.setState({category: res.data.graphs.dailyCases.categories})
         this.setState({loading: false})
