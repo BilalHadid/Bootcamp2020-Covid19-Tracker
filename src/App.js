@@ -12,15 +12,16 @@ function App() {
                 <Header />
               </div>
 
-              <div className="country">
+              <div>
                 
               
                  <Api/>
               
          
              <Graph/>
-             
-             <ApiCountry/>
+             <div className="country">
+             <ApiCountry />
+             </div>
              </div>
      </div>
   );

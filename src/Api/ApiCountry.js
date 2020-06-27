@@ -19,23 +19,17 @@ class ApiCountry extends Component{
             const data  = await res.json()
             if(data.length)
             this.setState(prevState => (
-                {stats:prevState.stats.concat(data[data.length - 1])}
+                {stats:prevState.stats.concat({...data[data.length - 1],CountryCode:country.ISO2})}
             ))
         })
     }
     render(){
     return (
         <div>
-            <table>
-                <thead>
-                    <tr>Country</tr>
-                </thead>
-                <tbody>
-                    <Countries sumary={this.state.stats.map((country, index)=> <h1 key={index}>{country.Country}</h1>)}/>
-                    
-                </tbody>
-            </table>
             
+            <Countries sumary={this.state.stats} code={this.state.stats}/>
+                    
+                
         </div>
     )
     }
