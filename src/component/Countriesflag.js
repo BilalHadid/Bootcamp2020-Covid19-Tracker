@@ -1,9 +1,10 @@
 import React from 'react'
 
-export const Countriesflag = (props) => {
+export const Countriesflag = ({sumary}) => {
     return (
         <div>
-            <p>{props.sumary.Country}</p>
+            <img src={`https://www.countryflags.io/${sumary.CountryCode}/flat/64.png`} alt={sumary.Country}/>
+            <p>{sumary.Country}</p>
         </div>
     )
 }

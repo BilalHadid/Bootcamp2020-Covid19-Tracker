@@ -27,7 +27,7 @@ class ApiCountry extends Component{
     return (
         <div>
             
-            <Countries sumary={this.state.stats} code={this.state.stats}/>
+            <Countries sumary={this.state.stats} />
                     
                 
         </div>
