@@ -15,9 +15,9 @@ export const Countries = () => {
    }
     return (
         <div>
-            {/* {data.map((a) => {
+            {data.map((a) => {
                 <p>{a.Country}</p>
-            })} */}
+            })}
         </div>
     )
 }
