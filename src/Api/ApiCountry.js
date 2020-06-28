@@ -1,12 +1,14 @@
 import React ,{ Component}from 'react'
 import {Countries} from '../component/Countries'
+import {SearchBox} from '../component/searchBox'
 
 class ApiCountry extends Component{
     constructor(){
         super()
         this.state = {
             countries:[],
-            stats: []
+            stats: [],
+            searchField: ''
 
         }
     }
@@ -24,10 +26,14 @@ class ApiCountry extends Component{
         })
     }
     render(){
+        const {stats, searchField} = this.state
+        const filterCountry = stats.filter(country =>(
+            country.Country.toLowerCase().includes(searchField.toLowerCase())
+        ))
     return (
         <div>
-            
-            <Countries sumary={this.state.stats} />
+             <SearchBox placeholder="Enter Your Country Name.." handleChange={(e) => this.setState({searchField: e.target.value})}/>
+            <Countries sumary={filterCountry} />
                     
                 
         </div>

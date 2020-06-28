@@ -20,6 +20,7 @@ function App() {
          
              <Graph/>
              <div className="country">
+              
              <ApiCountry />
              </div>
              </div>
