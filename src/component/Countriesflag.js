@@ -5,12 +5,19 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
+import CountUp from 'react-countup'
 
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
-    marginTop: "5rem"
+    marginTop: "5rem",
+    background: '#FEFCEE',
+    
+
+    
+    
   },
+  
 });
 
 
@@ -20,7 +27,7 @@ export const Countriesflag = ({sumary}) => {
         <div>
             
 
-            <Card className={classes.root}>
+            <Card className={classes.root} >
                 <CardActionArea>
                     <CardMedia
                     component="img"
@@ -29,14 +36,50 @@ export const Countriesflag = ({sumary}) => {
                     image={`https://www.countryflags.io/${sumary.CountryCode}/flat/64.png`}
                     title="Country"
                     />
-                    <CardContent>
+                    <CardContent className={classes.Country}>
                     <Typography gutterBottom variant="h5" component="h2">
                         {sumary.Country}
                     </Typography>
-                    <Typography vardiant="p">{`Active : ${sumary.Active}`}</Typography>
-                    <Typography vardiant="p">{`Confirmed : ${sumary.Confirmed}`}</Typography>
-                    <Typography vardiant="p">{`Deaths : ${sumary.Deaths}`}</Typography>
-                    <Typography vardiant="p">{`Recovered : ${sumary.Recovered}`}</Typography>
+                    <Typography vardiant="p">
+                        Confirmed :  
+                    <CountUp 
+                        start={0}
+                        end={sumary.Confirmed}
+                        duration={3.5}
+                        separator=","
+                    
+                    />
+                    </Typography>
+                    <Typography vardiant="p">
+                    Active :  
+                    <CountUp 
+                        start={0}
+                        end={sumary.Active}
+                        duration={3.5}
+                        separator=","
+                    
+                    />
+                        </Typography>
+                    <Typography vardiant="p">
+                    Deaths :  
+                    <CountUp 
+                        start={0}
+                        end={sumary.Deaths}
+                        duration={3.5}
+                        separator=","
+                    
+                    />
+                      </Typography>
+                    <Typography vardiant="p">
+                    Recovered :  
+                    <CountUp 
+                        start={0}
+                        end={sumary.Recovered}
+                        duration={3.5}
+                        separator=","
+                    
+                    />
+                    </Typography>
                     </CardContent>
                 </CardActionArea>
       

@@ -58,9 +58,10 @@
 }
 .country{
   margin-top: 24rem;
-  display: grid;
-  justify-content: center;
-  z-index: auto;
+  display: flex;
+  justify-content: space-between;
+
+  
 }
 
 .secondCard{
