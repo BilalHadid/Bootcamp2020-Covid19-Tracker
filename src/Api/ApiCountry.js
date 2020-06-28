@@ -32,7 +32,7 @@ class ApiCountry extends Component{
         ))
     return (
         <div>
-            <h1>Countries</h1>
+            <h1 className="Updates">Countries List</h1>
              <SearchBox placeholder="Enter Your Country Name.." handleChange={(e) => this.setState({searchField: e.target.value})}/>
             <Countries sumary={filterCountry} />
                     

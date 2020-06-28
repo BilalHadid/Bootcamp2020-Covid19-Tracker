@@ -27,10 +27,7 @@ export const SearchBox = (props) => {
     const classes = useStyles()
     return (
         <div>
-            {/* <form className={classes.root} noValidate autoComplete="off">
-                 <TextField id="outlined-basic" label="Country Name" variant="outlined" placeholder={props.placeholder} onChange={props.handleChange}/>
-
-            </form> */}
+            
             <Paper component="form" className={classes.root}>
         
                 <InputBase
