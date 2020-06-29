@@ -31,7 +31,7 @@ export const ChartBar = ({ allData }) => {
   const [set, setSet] = useState(false)
   return (
     <div>
-      <Button variant="contained" color="primary" onClick={() => setSet(true)} >
+      <Button variant="contained" color="secondary" onClick={() => setSet(set)} >
         {!set ? "Pie" : "Bar"}
       </Button>
       {set? <Pie
