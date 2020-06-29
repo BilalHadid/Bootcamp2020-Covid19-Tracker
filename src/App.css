@@ -58,8 +58,8 @@
 }
 .country{
   margin-top: 24rem;
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
 
   
 }
@@ -67,5 +67,14 @@
 .secondCard{
   margin-top: 50px;
   
+}
+.Bar{
+  margin-bottom: 25rem;
+}
+.countrylist{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 1rem;
+  width: 100%;
 }
 

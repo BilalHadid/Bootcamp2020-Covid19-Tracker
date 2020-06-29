@@ -18,6 +18,13 @@ code {
   justify-content: center;
   
 }
+.UpdatesTwo{
+  text-decoration: underline;
+  color: darkslategrey;
+  display: flex;
+  
+  
+}
 .Card{
   display: flex;
   justify-content: space-around;

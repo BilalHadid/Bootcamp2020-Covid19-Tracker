@@ -2,6 +2,7 @@ import React,{Component} from 'react'
 import axios from 'axios'
 import {Cards} from '../component/card'
 import {Update} from '../component/newUpdate'
+import ChartBar from '../component/BarCharts'
 import '../App.css'
 import '../index.css'
 
@@ -36,6 +37,10 @@ class Api extends Component{
                 
                 <Update updation={this.state.global}/>
             </div>
+            <div className="Bar">
+                <ChartBar allData={this.state.global}/>
+            </div>
+            
             </div>
         )
     }

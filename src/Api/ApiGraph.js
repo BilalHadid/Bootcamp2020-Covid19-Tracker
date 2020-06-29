@@ -1,6 +1,7 @@
 import React,{Component} from 'react'
 import axios from 'axios'
 import Chart  from '../component/Chart'
+import ChartBar from '../component/BarCharts'
 
 class Graph extends Component{
     state ={
@@ -21,6 +22,7 @@ class Graph extends Component{
         return(
             <div>
                <Chart dailyData = {this.state.dailyUpdate} categories = {this.state.category}/>
+               
             </div>
         )
     }
