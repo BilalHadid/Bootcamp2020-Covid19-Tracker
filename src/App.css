@@ -7,7 +7,7 @@
   justify-content: center;
   min-height: 100vh;
   margin: 0;
-  font-family:  sans-serif;
+  font-family: sans-serif;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -48,33 +48,42 @@
     transform: rotate(360deg);
   }
 }
-.firstCard{
+.firstCard {
   height: 150px;
-  font-size: 2.0rem;
+  font-size: 2rem;
   text-align: center;
-@media (min-width:600px){font-size: 3.8rem;}
-
-          
+  @media (min-width: 600px) {
+    font-size: 3.8rem;
+  }
 }
-.country{
+.country {
   margin-top: 24rem;
   /* display: flex;
   justify-content: center; */
-
-  
 }
 
-.secondCard{
+.secondCard {
   margin-top: 50px;
-  
 }
-.Bar{
-  margin-bottom: 25rem;
+.Bar {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
-.countrylist{
+.countrylist {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-gap: 1rem;
   width: 100%;
 }
-
+.Bar .btnBar {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.btnhandle {
+  background-color: #61dafb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,35 +1,80 @@
-import React from 'react';
-// import { Pie } from 'react-chartjs-2';
-// import './Chart.css'
+import React, { useState } from "react";
 
-const Chart = ({dailyData,categories}) => {
-//     const data = {
-//       labels: [
-//        ...categories
-//       ],
-//       datasets: [
-//         {
-//           label: 'Daily Cases',
-//           data: [...dailyData.data],
-//           fill: false,          // Don't fill area under the line
-//           borderColor: 'green'  // Line color
-//         }
-//       ]
-//     }
+import { Pie, Bar } from "react-chartjs-2";
+import { Button } from "@material-ui/core";
+export const ChartBar = ({ allData }) => {
+  const state = {
+    charData: {
+      labels: ["Total Confirmed", "Total Deaths", "Total Recovered"],
+      datasets: [
+        {
+          label: "Population",
+          data: [
+            allData.TotalConfirmed,
+            allData.TotalDeaths,
+            allData.TotalRecovered,
+          ],
+          backgroundColor: [
+            "#8300E4", //total Confirmd #8300E4
+            "#FF006A", //Total Death #FF006A
+            "#00F1A5", //total Reacovered #00F1A5
+            "rgba(75, 192, 192, 0.6)",
+            "rgba(153, 102, 255, 0.6)",
+            "rgba(255, 159, 64, 0.6)",
+            "rgba(255, 99, 132, 0.6)",
+          ],
+        },
+      ],
+    },
+  };
 
-//     const options = {
-//       maintainAspectRatio: true	// Don't maintain w/h ratio
-//     }
-
-    return (
-      <div >
-        
-          
-        {/* <article className="chart-container" >
-          <Pie data={data} options={options}/>
-        </article> */}
-      </div>
-    );
-  }
-
-export default Chart
+  const [set, setSet] = useState(false)
+  return (
+    <div>
+      <Button variant="contained" color="primary" onClick={() => setSet(true)} >
+        {!set ? "Pie" : "Bar"}
+      </Button>
+      {set? <Pie
+        data={state.charData}
+        options={{
+          title: {
+            display: true,
+            // text: 'Largest Population are effected covid 19',
+            fontSize: 25,
+          },
+          legend: {
+            display: true,
+            position: "right",
+          },
+        }}
+      />:<Bar
+      data={state.charData}
+      options={{
+        title: {
+          display: true,
+          // text: 'Largest Population are effected covid 19',
+          fontSize: 25,
+        },
+        legend: {
+          display: true,
+          position: "right",
+        },
+      }}
+    />}
+      {/* <Pie
+        data={state.charData}
+        options={{
+          title: {
+            display: true,
+            // text: 'Largest Population are effected covid 19',
+            fontSize: 25,
+          },
+          legend: {
+            display: true,
+            position: "right",
+          },
+        }}
+      /> */}
+    </div>
+  );
+};
