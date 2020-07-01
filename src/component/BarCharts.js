@@ -28,39 +28,47 @@ export const ChartBar = ({ allData }) => {
     },
   };
 
-  const [set, setSet] = useState(false)
+  const [set, setSet] = useState(false);
   return (
     <div>
-      <Button variant="contained" color="secondary" onClick={() => setSet(!set)} >
+      <Button
+        variant="contained"
+        color="secondary"
+        onClick={() => setSet(!set)}
+      >
         {!set ? "Change Pie to Bar" : "Change Bar to Pie"}
       </Button>
-      {set? <Pie
-        data={state.charData}
-        options={{
-          title: {
-            display: true,
-            // text: 'Largest Population are effected covid 19',
-            fontSize: 25,
-          },
-          legend: {
-            display: true,
-            position: "right",
-          },
-        }}
-      />:<Bar
-      data={state.charData}
-      options={{
-        title: {
-          display: true,
-          // text: 'Largest Population are effected covid 19',
-          fontSize: 25,
-        },
-        legend: {
-          display: true,
-          position: "right",
-        },
-      }}
-    />}
+      {set ? (
+        <Pie
+          data={state.charData}
+          options={{
+            title: {
+              display: true,
+              // text: 'Largest Population are effected covid 19',
+              fontSize: 25,
+            },
+            legend: {
+              display: true,
+              position: "right",
+            },
+          }}
+        />
+      ) : (
+        <Bar
+          data={state.charData}
+          options={{
+            title: {
+              display: true,
+              // text: 'Largest Population are effected covid 19',
+              fontSize: 25,
+            },
+            legend: {
+              display: true,
+              position: "right",
+            },
+          }}
+        />
+      )}
       {/* <Pie
         data={state.charData}
         options={{

@@ -1,4 +1,4 @@
-import React, { Component} from "react";
+import React, { Component } from "react";
 import axios from "axios";
 import { Cards } from "../component/card";
 import { Update } from "../component/newUpdate";
@@ -36,7 +36,6 @@ class Api extends Component {
         </div>
 
         <div className="Bar">
-          
           <ChartBar allData={this.state.global} />
         </div>
       </div>
